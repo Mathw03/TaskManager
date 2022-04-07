@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mathieu.taskmanager.DispatchDialogController">
+   <children>
+      <Label layoutX="101.0" layoutY="93.0" text="Nom:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="userName" layoutX="245.0" layoutY="93.0" prefHeight="17.0" prefWidth="126.0" text="Label">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo_box" layoutX="236.0" layoutY="175.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label layoutX="79.0" layoutY="174.0" text="Tache à Faire :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="245.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="25.0" prefWidth="103.0" text="OK" />
+      <Button layoutX="360.0" layoutY="302.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="25.0" prefWidth="103.0" text="Cancel" />
+   </children>
+</AnchorPane>

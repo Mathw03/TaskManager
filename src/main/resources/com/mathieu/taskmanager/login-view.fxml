@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #a9a9a9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mathieu.taskmanager.LoginController">
+
+        <children>
+      <Pane layoutX="393.0" layoutY="51.0" prefHeight="394.0" prefWidth="378.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 25;">
+         <children>
+                  <Label layoutX="85.0" layoutY="51.0" text="Connectez-vous !" textFill="DARKGRAY">
+                      <font>
+                          <Font name="SansSerif Regular" size="29.0" />
+                      </font>
+                  </Label>
+                  <TextField fx:id="txt_username" layoutX="75.0" layoutY="126.0" prefHeight="43.0" prefWidth="279.0" promptText="Username" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                  </TextField>
+                  <PasswordField fx:id="txt_password" layoutX="75.0" layoutY="197.0" prefHeight="43.0" prefWidth="279.0" promptText="Password" style="-fx-border-width: 2; -fx-border-color: #A9A9A9; -fx-border-radius: 5;">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                  </PasswordField>
+                  <Button fx:id="btn_signin" layoutX="136.0" layoutY="253.0" mnemonicParsing="false" onAction="#signin" prefHeight="43.0" prefWidth="124.0" style="-fx-background-color: #24a0ed;" text="Se connecter" textFill="#e4dcdc">
+                      <font>
+                          <Font name="SansSerif Bold" size="16.0" />
+                      </font>
+                  </Button>
+                  <Button fx:id="btn_forgotpassword" layoutX="88.0" layoutY="338.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Mot de passe oublié?" textFill="DARKGRAY" underline="true">
+                      <font>
+                          <Font size="19.0" />
+                      </font>
+                  </Button>
+                  <Button fx:id="btn_signuppage" layoutX="252.0" layoutY="296.0" mnemonicParsing="false" onAction="#signuppage" style="-fx-background-color: transparent;" text="S'inscrire" textFill="DARKGRAY" underline="true">
+                      <font>
+                          <Font size="19.0" />
+                      </font>
+                  </Button>
+            <ImageView fitHeight="43.0" fitWidth="41.0" layoutX="24.0" layoutY="126.0" opacity="0.35" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/user.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="41.0" layoutX="24.0" layoutY="198.0" opacity="0.33" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/padlock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="90.0" layoutY="188.0" text="Task" textFill="#5e5454">
+         <font>
+            <Font name="SansSerif Regular" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="182.0" text="Manager" textFill="#8a8383">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+        </children>
+
+
+</Pane>

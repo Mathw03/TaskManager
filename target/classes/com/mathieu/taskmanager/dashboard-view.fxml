@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mathieu.taskmanager.DashboardController">
+   <children>
+      <TabPane layoutY="-1.0" prefHeight="561.0" prefWidth="998.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dashboard">
+               <content>
+                  <Pane prefHeight="522.0" prefWidth="1008.0">
+                     <children>
+                        <Button layoutX="115.0" layoutY="280.0" onAction="#handleDispatch" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Dispatch Task" />
+                        <TableView fx:id="userFreeList" layoutX="23.0" layoutY="50.0" prefHeight="223.0" prefWidth="357.0">
+                           <columns>
+                              <TableColumn fx:id="userFreefullName" prefWidth="200.0" text="Name" />
+                              <TableColumn fx:id="userFreeCategory" prefWidth="158.0" text="category" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="80.0" layoutY="14.0" text="Employee libre">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="594.0" layoutY="14.0" text="Pending Task">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btn_logout" layoutX="290.0" layoutY="451.0" mnemonicParsing="false" onAction="#logout" prefHeight="8.0" prefWidth="103.0" text="Logout" textFill="#b93a3a" underline="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="timerLabel" layoutX="579.0" layoutY="89.0" prefHeight="45.0" prefWidth="66.0" text="Label">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="progressBar" layoutX="652.0" layoutY="102.0" prefHeight="18.0" prefWidth="170.0" progress="0.0" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab text="Gestion de Taches">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="514.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleNew" text="Add new task" />
+                        <Button layoutX="381.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleEdit" text="Edit task" />
+                        <Button layoutX="234.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete Task" />
+                        <TableView fx:id="taskList" editable="true" layoutX="234.0" layoutY="133.0" prefHeight="281.0" prefWidth="368.0">
+                           <columns>
+                              <TableColumn id="taskNames" fx:id="taskNames" prefWidth="165.0" text="Task name" />
+                              <TableColumn fx:id="category" prefWidth="105.0" text="category" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="372.0" layoutY="72.0" prefHeight="36.0" prefWidth="54.0" text="Task">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Gestion d'utilisateur">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="479.0" layoutY="370.0" mnemonicParsing="false" onAction="#handleDeleteUser" text="Delete employe" />
+                        <Button layoutX="365.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleEdit" text="Edit employe" />
+                        <Button layoutX="229.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleNew" text="Add new employe" />
+                        <TableView fx:id="userList" layoutX="229.0" layoutY="141.0" prefHeight="223.0" prefWidth="357.0">
+                           <columns>
+                              <TableColumn fx:id="userfullName" prefWidth="224.0" text="Nom" />
+                              <TableColumn fx:id="userCategory" prefWidth="132.0" text="category" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="312.0" layoutY="72.0" text="Tous les employe">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Gestion de categorie">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="355.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleNewCat" text="Add new category" />
+                        <Button layoutX="241.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleEditCat" text="Edit category" />
+                        <Button layoutX="106.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleDeleteCat" text="Delete category" />
+                        <TableView fx:id="categorylist" layoutX="100.0" layoutY="139.0" prefHeight="187.0" prefWidth="368.0">
+                           <columns>
+                              <TableColumn fx:id="categoryName" prefWidth="193.0" text="Name" />
+                              <TableColumn fx:id="categoryDescri" prefWidth="174.0" text="Description" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="236.0" layoutY="88.0" text="category">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
